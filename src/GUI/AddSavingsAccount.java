@@ -102,11 +102,14 @@ public class AddSavingsAccount extends JFrame {
 				int ch=JOptionPane.showConfirmDialog(getComponent(0), "Confirm?");
 				if(ch==0)
 				{
-					int index = FileIO.bank.addAccount(name, bal, maxw);
-					DisplayList.arr.addElement(FileIO.bank.getAccounts()[index].toString());
-					//file.Write(FileIO.bank);
-					JOptionPane.showMessageDialog(getComponent(0),"Added Successfully");
-					dispose();
+					try {
+						int index = FileIO.bank.addAccount(name, bal, maxw);
+						DisplayList.arr.addElement(FileIO.bank.getAccounts()[index].toString());
+						JOptionPane.showMessageDialog(getComponent(0),"Added Successfully");
+						dispose();
+					} catch (Exception ex) {
+						JOptionPane.showMessageDialog(getComponent(0), ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+					}
 				}
 				else 
 				{

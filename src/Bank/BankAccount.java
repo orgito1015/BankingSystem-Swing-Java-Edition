@@ -1,6 +1,7 @@
 package Bank;
 import java.io.Serializable;
 
+import Exceptions.InvalidAmount;
 import Exceptions.MaxBalance;
 import Exceptions.MaxWithdraw;
 
@@ -12,8 +13,9 @@ public class BankAccount implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private double balance;
-	private double min_balance;
-	private String acc_num;
+	protected double min_balance;
+	// Package-private: accessed directly by Bank.java in the same package
+	String acc_num;
 	//String type;
 	
 	
