@@ -1,0 +1,19 @@
+# Compiled class files
+*.class
+
+# Eclipse build output directory
+bin/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Runtime data files
+data
+data.bin
+
+# OS files
+.DS_Store
+Thumbs.db

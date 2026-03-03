@@ -18,21 +18,47 @@ The Banking System is a Java Swing application that simulates basic banking oper
 - Java
 - Java Swing for GUI
 
-## Installation
+## Installation & Running
+
+### Option 1: Eclipse IDE (Recommended)
+
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/banking-system.git
-   cd banking-system
-   
+   git clone https://github.com/orgito1015/BankingSystem-Swing-Java-Edition.git
    ```
-2. Run Project
+2. Open Eclipse and go to **File → Import → Existing Projects into Workspace**.
+3. Select the cloned repository folder as the root directory and click **Finish**.
+4. Eclipse will automatically build the project. Make sure there are no errors in the **Problems** tab.
+5. In the **Package Explorer**, open `src/Application.java`.
+6. Right-click on `Application.java` → **Run As → Java Application**.
+
+> **Default login credentials:** Username: `admin` / Password: `admin`
+
+### Option 2: Command Line
+
+1. Clone the repository:
    ```bash
-   javac Main.java
-   java Main
+   git clone https://github.com/orgito1015/BankingSystem-Swing-Java-Edition.git
+   cd BankingSystem-Swing-Java-Edition
    ```
+2. Compile the source files:
+   ```bash
+   mkdir -p bin
+   javac -d bin src/Application.java src/Bank/*.java src/Data/*.java src/Exceptions/*.java src/GUI/*.java
+   ```
+3. Copy the image resource:
+   ```bash
+   cp -r src/img bin/img
+   ```
+4. Run the application:
+   ```bash
+   java -cp bin Application
+   ```
+
 ## Usage
-1. Launch the application.
-2. Follow the on-screen instructions to perform banking operations.
+1. Launch the application — the Login screen will appear.
+2. Enter `admin` as both the username and password, then click **Login**.
+3. Use the main menu to add accounts, deposit, withdraw, or view the account list.
 
 ## Contribution
 Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
